@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: cl.exe build active file",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/Zi", "/EHsc",
+                "/I", "C:\\Users\\annie\\Documents\\Library\\SFML-2.6.1\\include",
+                "${file}",
+                "/link",
+                "/LIBPATH:C:\\Users\\annie\\Documents\\Library\\SFML-2.6.1\\lib",
+                "sfml-graphics.lib",
+                "sfml-window.lib",
+                "sfml-system.lib"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"]
+        }
+    ]
+}
